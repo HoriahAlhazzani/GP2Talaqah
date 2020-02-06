@@ -331,9 +331,9 @@
         <!--View Controller-->
         <scene sceneID="iiy-Sw-HwS">
             <objects>
-                <viewController id="qLe-eV-4B2" sceneMemberID="viewController">
+                <viewController id="qLe-eV-4B2" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gVK-5d-eBd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="16" affinity="minX"/>
@@ -341,7 +341,7 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SKa-0o-9Mq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JSK-Pa-riJ">
                                         <rect key="frame" x="16" y="8" width="382" height="50"/>
@@ -392,9 +392,12 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signOut:" destination="qLe-eV-4B2" eventType="touchUpInside" id="9z6-of-ntm"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="PhL-Lh-BnP">
-                                        <rect key="frame" x="16" y="363" width="382" height="447"/>
+                                        <rect key="frame" x="16" y="363" width="382" height="437"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -506,6 +509,9 @@
                                                 <barButtonItem key="backBarButtonItem" title="رجوع" id="hUs-R2-aox"/>
                                                 <barButtonItem key="leftBarButtonItem" title="تعديل" style="done" id="gUv-bn-a0O">
                                                     <color key="tintColor" red="0.99602228400000004" green="0.68306756020000003" blue="0.61213427779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <segue destination="qLe-eV-4B2" kind="presentation" id="ViC-H9-eVm"/>
+                                                    </connections>
                                                 </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" image="arrowshape.turn.up.right.circle" catalog="system" id="zyA-tl-g0u">
                                                     <color key="tintColor" red="0.99602228400000004" green="0.68306756020000003" blue="0.61213427779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
