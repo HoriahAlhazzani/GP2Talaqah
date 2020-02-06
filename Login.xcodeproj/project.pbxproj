@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		208F16772235EAAB002CF75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F16762235EAAB002CF75F /* AppDelegate.swift */; };
-		208F16792235EAAB002CF75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F16782235EAAB002CF75F /* ViewController.swift */; };
+		208F16792235EAAB002CF75F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F16782235EAAB002CF75F /* LoginViewController.swift */; };
 		208F167C2235EAAB002CF75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F167A2235EAAB002CF75F /* Main.storyboard */; };
 		208F167E2235EAAC002CF75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208F167D2235EAAC002CF75F /* Assets.xcassets */; };
 		208F16892235F109002CF75F /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F16882235F109002CF75F /* DesignableView.swift */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		208F16732235EAAB002CF75F /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208F16762235EAAB002CF75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		208F16782235EAAB002CF75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		208F16782235EAAB002CF75F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		208F167B2235EAAB002CF75F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208F167D2235EAAC002CF75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208F16822235EAAC002CF75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,20 +82,44 @@
 		208F16752235EAAB002CF75F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F5B7BF0D23EB3AE40033B094 /* LaunchScreen.storyboard */,
-				20B1567F22480ADC00A70D9F /* UIViewController+Extensions.swift */,
+				37D3037E23EC813B00DD3E0C /* Model */,
+				37D3037F23EC814B00DD3E0C /* View */,
+				37D3037D23EC812600DD3E0C /* Controllers */,
 				208F16762235EAAB002CF75F /* AppDelegate.swift */,
-				208F16782235EAAB002CF75F /* ViewController.swift */,
-				208F167A2235EAAB002CF75F /* Main.storyboard */,
-				208F167D2235EAAC002CF75F /* Assets.xcassets */,
 				F5DCFFEB23E5A453005B2D38 /* GoogleService-Info.plist */,
 				208F16822235EAAC002CF75F /* Info.plist */,
-				208F16882235F109002CF75F /* DesignableView.swift */,
-				F5096F4B23E5C4AC00078322 /* Constants.swift */,
-				F5096F4F23E5C52900078322 /* HomeViewController.swift */,
-				F5B7BF0F23EB43E70033B094 /* Validation.swift */,
+				208F167D2235EAAC002CF75F /* Assets.xcassets */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		37D3037D23EC812600DD3E0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5096F4F23E5C52900078322 /* HomeViewController.swift */,
+				20B1567F22480ADC00A70D9F /* UIViewController+Extensions.swift */,
+				208F16782235EAAB002CF75F /* LoginViewController.swift */,
+				208F16882235F109002CF75F /* DesignableView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		37D3037E23EC813B00DD3E0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5B7BF0F23EB43E70033B094 /* Validation.swift */,
+				F5096F4B23E5C4AC00078322 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37D3037F23EC814B00DD3E0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5B7BF0D23EB3AE40033B094 /* LaunchScreen.storyboard */,
+				208F167A2235EAAB002CF75F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FCE6F9B21A679FDE6102A64D /* Frameworks */ = {
@@ -225,7 +249,7 @@
 			files = (
 				F5096F4C23E5C4AC00078322 /* Constants.swift in Sources */,
 				20B1568022480ADC00A70D9F /* UIViewController+Extensions.swift in Sources */,
-				208F16792235EAAB002CF75F /* ViewController.swift in Sources */,
+				208F16792235EAAB002CF75F /* LoginViewController.swift in Sources */,
 				208F16772235EAAB002CF75F /* AppDelegate.swift in Sources */,
 				208F16892235F109002CF75F /* DesignableView.swift in Sources */,
 				F5096F5023E5C52900078322 /* HomeViewController.swift in Sources */,
