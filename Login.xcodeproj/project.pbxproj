@@ -64,11 +64,7 @@
 		208F166A2235EAAB002CF75F = {
 			isa = PBXGroup;
 			children = (
-				37D3037E23EC813B00DD3E0C /* Model */,
-				37D3037F23EC814B00DD3E0C /* View */,
-				37D3037D23EC812600DD3E0C /* Controllers */,
 				208F16752235EAAB002CF75F /* Login */,
-				208F167D2235EAAC002CF75F /* Assets.xcassets */,
 				208F16742235EAAB002CF75F /* Products */,
 				131208909D2DD26E6344C837 /* Pods */,
 				FCE6F9B21A679FDE6102A64D /* Frameworks */,
@@ -86,9 +82,13 @@
 		208F16752235EAAB002CF75F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				37D3037E23EC813B00DD3E0C /* Model */,
+				37D3037F23EC814B00DD3E0C /* View */,
+				37D3037D23EC812600DD3E0C /* Controllers */,
 				208F16762235EAAB002CF75F /* AppDelegate.swift */,
 				F5DCFFEB23E5A453005B2D38 /* GoogleService-Info.plist */,
 				208F16822235EAAC002CF75F /* Info.plist */,
+				208F167D2235EAAC002CF75F /* Assets.xcassets */,
 			);
 			path = Login;
 			sourceTree = "<group>";
