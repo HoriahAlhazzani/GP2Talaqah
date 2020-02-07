@@ -853,7 +853,7 @@
                                 <rect key="frame" x="20" y="553" width="374" height="30"/>
                                 <state key="normal" title="start"/>
                                 <connections>
-                                    <action selector="recordButtonTapped" destination="YId-ae-eau" eventType="touchUpInside" id="292-Ql-N8v"/>
+                                    <action selector="recordButtonPressed:" destination="YId-ae-eau" eventType="touchUpInside" id="OhR-QI-6Yg"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-dn-uq2">
@@ -862,27 +862,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-gr-v4E">
+                                <rect key="frame" x="192" y="591" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="YId-ae-eau" eventType="touchUpInside" id="B99-U9-CBa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Qeh-dn-uq2" firstAttribute="trailing" secondItem="EOd-ty-Vee" secondAttribute="trailingMargin" id="Eyf-YN-Si2"/>
+                            <constraint firstItem="8Eh-gr-v4E" firstAttribute="centerX" secondItem="rNp-CE-mBt" secondAttribute="centerX" id="S6T-Ft-zFM"/>
                             <constraint firstItem="rNp-CE-mBt" firstAttribute="top" secondItem="Qeh-dn-uq2" secondAttribute="bottom" constant="54" id="SYc-kT-1jb"/>
                             <constraint firstItem="Qeh-dn-uq2" firstAttribute="leading" secondItem="EOd-ty-Vee" secondAttribute="leadingMargin" id="Sud-H5-VDD"/>
                             <constraint firstItem="Qeh-dn-uq2" firstAttribute="top" secondItem="Quy-qs-3Bf" secondAttribute="top" constant="19" id="e0G-J9-4yh"/>
                             <constraint firstItem="Qeh-dn-uq2" firstAttribute="trailing" secondItem="rNp-CE-mBt" secondAttribute="trailing" id="fij-Oi-Ijv"/>
+                            <constraint firstItem="8Eh-gr-v4E" firstAttribute="top" secondItem="rNp-CE-mBt" secondAttribute="bottom" constant="8" id="gVJ-dL-SM4"/>
                             <constraint firstItem="Quy-qs-3Bf" firstAttribute="bottom" secondItem="rNp-CE-mBt" secondAttribute="bottom" constant="225" id="hBb-Pn-cAM"/>
                             <constraint firstItem="Qeh-dn-uq2" firstAttribute="leading" secondItem="rNp-CE-mBt" secondAttribute="leading" id="xfc-0p-54L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Quy-qs-3Bf"/>
                     </view>
                     <connections>
-                        <outlet property="recordButton" destination="rNp-CE-mBt" id="9mv-dw-6Mh"/>
+                        <outlet property="playButton" destination="8Eh-gr-v4E" id="8Ho-r1-9FH"/>
+                        <outlet property="recordButton" destination="rNp-CE-mBt" id="4TZ-J3-x4R"/>
                         <outlet property="textView" destination="Qeh-dn-uq2" id="Q0Q-Hw-Lcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEA-Z0-2Pm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1165" y="805"/>
+            <point key="canvasLocation" x="-1165.217391304348" y="804.91071428571422"/>
         </scene>
     </scenes>
     <resources>

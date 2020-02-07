@@ -11,7 +11,7 @@ import Speech
 
 extension SpeechController{
     
-    func startRecording() throws {
+    func startRecordingFirst() throws {
         
         if recognitionTask != nil {
             recognitionTask?.cancel()
