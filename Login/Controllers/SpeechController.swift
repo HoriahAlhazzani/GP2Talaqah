@@ -44,7 +44,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
    recordingSession = AVAudioSession.sharedInstance()
    
    do {
-       try recordingSession.setCategory(.record, mode: .default)
+       try recordingSession.setCategory(.playAndRecord, mode: .default)
        try recordingSession.setActive(true)
        recordingSession.requestRecordPermission { [unowned self] allowed in
            DispatchQueue.main.async {
@@ -87,19 +87,19 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
     func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
         
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatAppleLossless),
-            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
-            AVEncoderBitRateKey: 320000,
-            AVNumberOfChannelsKey: 2,
-            AVSampleRateKey: 44100.0 ] as [String : Any]
+//        let settings = [
+//            AVFormatIDKey: Int(kAudioFormatAppleLossless),
+//            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+//            AVEncoderBitRateKey: 320000,
+//            AVNumberOfChannelsKey: 2,
+//            AVSampleRateKey: 44100.0 ] as [String : Any]
 
-////          let settings = [
-////                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-////                AVSampleRateKey: 12000,
-////                AVNumberOfChannelsKey: 1,
-////                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-////            ]
+          let settings = [
+                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+                AVSampleRateKey: 12000,
+                AVNumberOfChannelsKey: 1,
+                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ]
 //
 //        let settings = [
 //                           AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
