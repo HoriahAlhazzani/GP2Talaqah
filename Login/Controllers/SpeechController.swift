@@ -6,7 +6,6 @@
 //  Copyright © 1441 Gary Tokman. All rights reserved.
 //
 
-
 import UIKit
 import Speech
 import AVFoundation
@@ -45,7 +44,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
    recordingSession = AVAudioSession.sharedInstance()
    
    do {
-       try recordingSession.setCategory(.playAndRecord, mode: .default)
+       try recordingSession.setCategory(.record, mode: .default)
        try recordingSession.setActive(true)
        recordingSession.requestRecordPermission { [unowned self] allowed in
            DispatchQueue.main.async {
@@ -85,18 +84,32 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
     
     
     // MARK: - Recording
-
     func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
         
         let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.medium.rawValue
-        ]
+            AVFormatIDKey: Int(kAudioFormatAppleLossless),
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+            AVEncoderBitRateKey: 320000,
+            AVNumberOfChannelsKey: 2,
+            AVSampleRateKey: 44100.0 ] as [String : Any]
+
+////          let settings = [
+////                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+////                AVSampleRateKey: 12000,
+////                AVNumberOfChannelsKey: 1,
+////                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+////            ]
+//
+//        let settings = [
+//                           AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+//                           AVSampleRateKey: 44100,
+//                           AVNumberOfChannelsKey: 2,
+//                           AVEncoderAudioQualityKey:AVAudioQuality.high.rawValue
+//                       ]
         
         do {
+            try recordingSession.setCategory(.record, mode: .default)
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self
             
@@ -148,6 +161,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
     func startPlayback() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
         do {
+            try recordingSession.setCategory(.playback, mode: .default)
             audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
             audioPlayer.delegate = self
             audioPlayer.play()
@@ -161,6 +175,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
     func finishPlayback() {
         audioPlayer = nil
         playButton.setTitle("Play Your Recording", for: .normal)
+        
     }
 
 
@@ -192,7 +207,6 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
 //            recordButton.setTitle("Pause recording", for: [])
 //        }
 //    }
-
     
 }
 
@@ -213,4 +227,3 @@ extension SpeechController: AVAudioPlayerDelegate {
     }
     
 }
-
