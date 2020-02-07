@@ -18,6 +18,10 @@
 		F5096F5023E5C52900078322 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5096F4F23E5C52900078322 /* HomeViewController.swift */; };
 		F5B7BF0E23EB3AE40033B094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B7BF0D23EB3AE40033B094 /* LaunchScreen.storyboard */; };
 		F5B7BF1023EB43E70033B094 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7BF0F23EB43E70033B094 /* Validation.swift */; };
+		F5DBF15223ECCB54003F6E74 /* LanguageToSpeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF14E23ECCB54003F6E74 /* LanguageToSpeak.swift */; };
+		F5DBF15323ECCB54003F6E74 /* SpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF14F23ECCB54003F6E74 /* SpeechController.swift */; };
+		F5DBF15423ECCB54003F6E74 /* SpeachToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF15023ECCB54003F6E74 /* SpeachToText.swift */; };
+		F5DBF15523ECCB54003F6E74 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF15123ECCB54003F6E74 /* Authorization.swift */; };
 		F5DCFFEC23E5A453005B2D38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5DCFFEB23E5A453005B2D38 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,10 @@
 		F5096F4F23E5C52900078322 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F5B7BF0D23EB3AE40033B094 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B7BF0F23EB43E70033B094 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		F5DBF14E23ECCB54003F6E74 /* LanguageToSpeak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageToSpeak.swift; path = ../../../Documents/SpeechToText/SpeechToText/LanguageToSpeak.swift; sourceTree = "<group>"; };
+		F5DBF14F23ECCB54003F6E74 /* SpeechController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechController.swift; path = ../../../Documents/SpeechToText/SpeechToText/SpeechController.swift; sourceTree = "<group>"; };
+		F5DBF15023ECCB54003F6E74 /* SpeachToText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeachToText.swift; path = ../../../Documents/SpeechToText/SpeechToText/SpeachToText.swift; sourceTree = "<group>"; };
+		F5DBF15123ECCB54003F6E74 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = ../../../Documents/SpeechToText/SpeechToText/Authorization.swift; sourceTree = "<group>"; };
 		F5DCFFEB23E5A453005B2D38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDFB2D9428D996E769DB0078 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +72,10 @@
 		208F166A2235EAAB002CF75F = {
 			isa = PBXGroup;
 			children = (
+				F5DBF15123ECCB54003F6E74 /* Authorization.swift */,
+				F5DBF14E23ECCB54003F6E74 /* LanguageToSpeak.swift */,
+				F5DBF15023ECCB54003F6E74 /* SpeachToText.swift */,
+				F5DBF14F23ECCB54003F6E74 /* SpeechController.swift */,
 				208F16752235EAAB002CF75F /* Login */,
 				208F16742235EAAB002CF75F /* Products */,
 				131208909D2DD26E6344C837 /* Pods */,
@@ -250,6 +262,10 @@
 				F5096F4C23E5C4AC00078322 /* Constants.swift in Sources */,
 				20B1568022480ADC00A70D9F /* UIViewController+Extensions.swift in Sources */,
 				208F16792235EAAB002CF75F /* LoginViewController.swift in Sources */,
+				F5DBF15323ECCB54003F6E74 /* SpeechController.swift in Sources */,
+				F5DBF15523ECCB54003F6E74 /* Authorization.swift in Sources */,
+				F5DBF15223ECCB54003F6E74 /* LanguageToSpeak.swift in Sources */,
+				F5DBF15423ECCB54003F6E74 /* SpeachToText.swift in Sources */,
 				208F16772235EAAB002CF75F /* AppDelegate.swift in Sources */,
 				208F16892235F109002CF75F /* DesignableView.swift in Sources */,
 				F5096F5023E5C52900078322 /* HomeViewController.swift in Sources */,
