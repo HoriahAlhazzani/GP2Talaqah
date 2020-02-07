@@ -114,20 +114,20 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
             audioRecorder.delegate = self
             
                  if  audioEngine.isRunning {
-                     
+
                      recognitionRequest?.shouldReportPartialResults = false
                      audioEngine.inputNode.removeTap(onBus: 0)
                      audioEngine.stop()
                      recognitionRequest?.endAudio()
-                     
+
 
                      recordButton.isEnabled = true
                      recordButton.setTitle("Start Recording", for: [])
-                     
+
                  } else {
-               
+
                      try! startRecordingFirst()
-            
+
                      recordButton.setTitle("Pause recording", for: [])
                  }
             
@@ -141,6 +141,11 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
     }
     
     func finishRecording(success: Bool) {
+        
+        audioEngine.stop()
+
+        recognitionRequest?.endAudio()
+        
         audioRecorder.stop()
         audioRecorder = nil
         
@@ -148,6 +153,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
             recordButton.setTitle("Tap to Re-record", for: .normal)
             playButton.setTitle("Play Your Recording", for: .normal)
             playButton.isHidden = false
+    
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
             playButton.isHidden = true
