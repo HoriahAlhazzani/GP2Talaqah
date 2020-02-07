@@ -11,7 +11,10 @@ import UIKit
 class Language{
     
     public static let instance = Language()
-    var langCode = NSLocale.preferredLanguages[0]
+    
+//    var langCode = NSLocale.preferredLanguages[0]
+    var langCode = "ar-sa"
+
     var regionCode = Locale.current.regionCode!
   
     
