@@ -44,7 +44,7 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
    recordingSession = AVAudioSession.sharedInstance()
    
    do {
-       try recordingSession.setCategory(.playAndRecord, mode: .default)
+//       try recordingSession.setCategory(.playAndRecord, mode: .default)
        try recordingSession.setActive(true)
        recordingSession.requestRecordPermission { [unowned self] allowed in
            DispatchQueue.main.async {
@@ -187,26 +187,6 @@ class SpeechController: UIViewController,SFSpeechRecognizerDelegate {
         
     }
     
-//    @IBAction func recordButtonTapped() {
-//
-//        if  audioEngine.isRunning {
-//
-//            recognitionRequest?.shouldReportPartialResults = false
-//            audioEngine.inputNode.removeTap(onBus: 0)
-//            audioEngine.stop()
-//            recognitionRequest?.endAudio()
-//
-//
-//            recordButton.isEnabled = true
-//            recordButton.setTitle("Start Recording", for: [])
-//
-//        } else {
-//
-//            try! startRecordingFirst()
-//
-//            recordButton.setTitle("Pause recording", for: [])
-//        }
-//    }
     
 }
 
