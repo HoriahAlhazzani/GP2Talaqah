@@ -146,7 +146,7 @@
                                                     <color key="titleColor" red="1" green="0.60784313729999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="e0U-Up-pQu" kind="presentation" id="3k3-4M-DS7"/>
+                                                    <segue destination="e0U-Up-pQu" kind="presentation" identifier="toHome" id="3k3-4M-DS7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-le-7vq">
@@ -197,6 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cOM-4R-G1m"/>
                     <connections>
                         <outlet property="emailTextField" destination="Slm-Fi-xBk" id="33v-1q-nF0"/>
                         <outlet property="passwordTextField" destination="WVl-vh-Quv" id="6CJ-9k-AT4"/>
@@ -486,6 +487,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3a2-Jn-YLy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BEV-ro-j6b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWO-W2-dku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,16 +689,17 @@
             </objects>
             <point key="canvasLocation" x="1352" y="761"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Register Controller-->
         <scene sceneID="1rD-tA-VTS">
             <objects>
-                <viewController id="e0U-Up-pQu" customClass="LoginViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWa-3U-tdU" sceneMemberID="firstResponder"/>
+                <viewController id="e0U-Up-pQu" customClass="RegisterController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q3O-Ms-sly">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="15" affinity="minX"/>
-                            <userLayoutGuide location="398" affinity="minX"/>
+                            <userLayoutGuide location="397" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-Sz-atF">
@@ -711,11 +714,86 @@
                                     <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="N9y-mp-g0z">
                                         <rect key="frame" x="0.0" y="144" width="414" height="608"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-5v-Yh4">
-                                                <rect key="frame" x="15" y="473" width="382" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رقم الهوية/الإقامة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5x-qM-P5t">
+                                                <rect key="frame" x="62" y="40" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="البريد الإلكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-ww-lVs">
+                                                <rect key="frame" x="62" y="90" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رقم الجوال" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAn-5b-QqD">
+                                                <rect key="frame" x="62" y="142" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQW-vp-j4r">
+                                                <rect key="frame" x="62" y="192" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تأكيد كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-jc-wVv">
+                                                <rect key="frame" x="62" y="248" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الاسم الآول" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-Qc-KSu">
+                                                <rect key="frame" x="62" y="305" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم العائلة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZR-Zj-GXz">
+                                                <rect key="frame" x="62" y="358" width="312" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Eu-JS-OEP">
+                                                <rect key="frame" x="62" y="413" width="312" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="ذكر"/>
+                                                    <segment title="أنثى"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="genderSegmented:" destination="e0U-Up-pQu" eventType="valueChanged" id="nP0-Co-2tn"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هناك خطأ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qk-PU-rkh">
+                                                <rect key="frame" x="210" y="452" width="164" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYP-Cm-7Gu">
+                                                <rect key="frame" x="101.5" y="582" width="91" height="30"/>
+                                                <state key="normal" title="تسجيل الدخول">
+                                                    <color key="titleColor" red="1" green="0.60784313729999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="LoginTapped:" destination="e0U-Up-pQu" eventType="touchUpInside" id="tcP-hI-hPR"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-J1-kIN">
+                                                <rect key="frame" x="139" y="586.5" width="205" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-Tg-763">
+                                                <rect key="frame" x="16" y="500" width="382" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.60784313729999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Ytt-ib-arZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="HUj-et-e8J"/>
                                                 </constraints>
                                                 <state key="normal" title="تسجيل">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -726,83 +804,20 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="registerPatient:" destination="e0U-Up-pQu" eventType="touchUpInside" id="QDr-PW-ti3"/>
-                                                </connections>
-                                            </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رقم الهوية/الإقامة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cX-CO-VFw">
-                                                <rect key="frame" x="53" y="30" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="البريد الإلكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35C-Qv-z2G">
-                                                <rect key="frame" x="53" y="72" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رقم الجوال" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48P-cX-cUt">
-                                                <rect key="frame" x="53" y="122" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-9r-Cdq">
-                                                <rect key="frame" x="53" y="174" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="تأكيد كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-2V-aCV">
-                                                <rect key="frame" x="53" y="227" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الاسم الآول" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-Li-2b4">
-                                                <rect key="frame" x="53" y="280" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم العائلة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IiH-ZP-mp0">
-                                                <rect key="frame" x="53" y="333" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الجنس" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJn-VR-Rjj">
-                                                <rect key="frame" x="53" y="390" width="312" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-2b-rDj">
-                                                <rect key="frame" x="144" y="553.5" width="197" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Feh-fC-dyn">
-                                                <rect key="frame" x="101.5" y="549" width="91" height="30"/>
-                                                <state key="normal" title="تسجيل الدخول">
-                                                    <color key="titleColor" red="1" green="0.60784313729999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="presentation" id="yUA-nk-SVZ"/>
+                                                    <action selector="RegisterTapped:" destination="e0U-Up-pQu" eventType="touchUpInside" id="oVz-Yf-YBf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hqt-2b-rDj" firstAttribute="leading" secondItem="N9y-mp-g0z" secondAttribute="leadingMargin" constant="136" id="NQc-iN-E6Y"/>
-                                            <constraint firstItem="Feh-fC-dyn" firstAttribute="top" secondItem="JfR-5v-Yh4" secondAttribute="bottom" constant="26" id="Q35-a1-PIW"/>
-                                            <constraint firstAttribute="bottom" secondItem="Feh-fC-dyn" secondAttribute="bottom" constant="29" id="Rcw-WC-F0K"/>
-                                            <constraint firstItem="JfR-5v-Yh4" firstAttribute="leading" secondItem="N9y-mp-g0z" secondAttribute="leading" constant="15" id="bEk-ch-g4O"/>
-                                            <constraint firstItem="Feh-fC-dyn" firstAttribute="centerX" secondItem="N9y-mp-g0z" secondAttribute="centerX" constant="-60" id="gag-gN-wyF"/>
-                                            <constraint firstItem="JfR-5v-Yh4" firstAttribute="centerX" secondItem="N9y-mp-g0z" secondAttribute="centerX" constant="-1" id="u0k-Ff-Huf"/>
-                                            <constraint firstItem="Feh-fC-dyn" firstAttribute="top" secondItem="hqt-2b-rDj" secondAttribute="bottom" constant="-25" id="vJk-EP-gIo"/>
-                                            <constraint firstAttribute="trailing" secondItem="hqt-2b-rDj" secondAttribute="trailing" constant="73" id="w9q-7o-nXs"/>
+                                            <constraint firstItem="1IR-J1-kIN" firstAttribute="leading" secondItem="N9y-mp-g0z" secondAttribute="leading" constant="136" id="0ri-xd-dv8"/>
+                                            <constraint firstAttribute="trailing" secondItem="1IR-J1-kIN" secondAttribute="trailing" constant="73" id="12p-qz-ddu"/>
+                                            <constraint firstItem="kwm-Tg-763" firstAttribute="centerX" secondItem="N9y-mp-g0z" secondAttribute="centerX" constant="-1" id="8Gy-vu-XbK"/>
+                                            <constraint firstItem="FYP-Cm-7Gu" firstAttribute="centerX" secondItem="N9y-mp-g0z" secondAttribute="centerX" constant="-60" id="E3g-BA-Q1S"/>
+                                            <constraint firstItem="FYP-Cm-7Gu" firstAttribute="top" secondItem="1IR-J1-kIN" secondAttribute="bottom" constant="-25" id="Oaw-T2-3vD"/>
+                                            <constraint firstAttribute="bottom" secondItem="FYP-Cm-7Gu" secondAttribute="bottom" constant="29" id="Rie-c1-hAr"/>
+                                            <constraint firstItem="kwm-Tg-763" firstAttribute="leading" secondItem="N9y-mp-g0z" secondAttribute="leading" constant="15" id="TVR-kA-vsS"/>
+                                            <constraint firstItem="FYP-Cm-7Gu" firstAttribute="top" secondItem="kwm-Tg-763" secondAttribute="bottom" constant="26" id="r1I-zt-jtU"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Act-rH-c9j">
@@ -833,13 +848,21 @@
                         <viewLayoutGuide key="safeArea" id="fcG-co-IFL"/>
                     </view>
                     <connections>
-                        <outlet property="regEmail" destination="35C-Qv-z2G" id="u5C-Ee-J0b"/>
-                        <outlet property="regPassword" destination="x3c-9r-Cdq" id="w4k-zQ-RqX"/>
+                        <outlet property="confirmPasswordTextField" destination="dHe-jc-wVv" id="F1A-pp-LsO"/>
+                        <outlet property="emailTextField" destination="OBz-ww-lVs" id="7DW-VI-S4Z"/>
+                        <outlet property="errorLabel" destination="4Qk-PU-rkh" id="SKo-tu-FFc"/>
+                        <outlet property="firstNameTextField" destination="fAH-Qc-KSu" id="ooJ-5v-Sdm"/>
+                        <outlet property="lastNameTextField" destination="pZR-Zj-GXz" id="HLY-1Z-KXB"/>
+                        <outlet property="nIDTextField" destination="A5x-qM-P5t" id="PNe-Wa-78Y"/>
+                        <outlet property="passwordTextField" destination="MQW-vp-j4r" id="A92-SH-4zr"/>
+                        <outlet property="phoneNumberTextField" destination="fAn-5b-QqD" id="1hW-oh-E2m"/>
+                        <outlet property="registerButton" destination="kwm-Tg-763" id="Zb8-sG-0Hv"/>
+                        <segue destination="qtF-bu-HVV" kind="presentation" identifier="toStart" id="kWo-SI-Pa5"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLogin" id="G5z-Ln-Bva"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xWa-3U-tdU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-386.95652173913044" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-536" y="21"/>
         </scene>
         <!--Speech Controller-->
         <scene sceneID="ipw-p9-E37">
@@ -900,4 +923,7 @@
         <image name="Header" width="434" height="382"/>
         <image name="arrowshape.turn.up.right.circle" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kWo-SI-Pa5"/>
+    </inferredMetricsTieBreakers>
 </document>
