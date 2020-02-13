@@ -17,6 +17,8 @@
 		45D136C323F428BC00ADEA97 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D136C223F428BC00ADEA97 /* RegisterController.swift */; };
 		45D136C523F42CFE00ADEA97 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D136C423F42CFE00ADEA97 /* Patient.swift */; };
 		45D136C723F42D3500ADEA97 /* Trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D136C623F42D3500ADEA97 /* Trial.swift */; };
+		88925F4423F48B2000425C75 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88925F4323F48B2000425C75 /* AccountViewController.swift */; };
+		88925F4623F48C1C00425C75 /* getTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88925F4523F48C1C00425C75 /* getTrial.swift */; };
 		C03E2C251D7F519C9C32FF2D /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFB2D9428D996E769DB0078 /* Pods_Login.framework */; };
 		F5096F4C23E5C4AC00078322 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5096F4B23E5C4AC00078322 /* Constants.swift */; };
 		F5096F5023E5C52900078322 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5096F4F23E5C52900078322 /* HomeViewController.swift */; };
@@ -43,6 +45,8 @@
 		45D136C423F42CFE00ADEA97 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		45D136C623F42D3500ADEA97 /* Trial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trial.swift; sourceTree = "<group>"; };
 		6857D0643900C861951944A6 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
+		88925F4323F48B2000425C75 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		88925F4523F48C1C00425C75 /* getTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getTrial.swift; sourceTree = "<group>"; };
 		E49B59FE26B9213ABD4F7741 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		F5096F4B23E5C4AC00078322 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5096F4F23E5C52900078322 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		37D3037D23EC812600DD3E0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				88925F4323F48B2000425C75 /* AccountViewController.swift */,
+				88925F4523F48C1C00425C75 /* getTrial.swift */,
 				F5096F4F23E5C52900078322 /* HomeViewController.swift */,
 				20B1567F22480ADC00A70D9F /* UIViewController+Extensions.swift */,
 				208F16782235EAAB002CF75F /* LoginViewController.swift */,
@@ -273,7 +279,9 @@
 			files = (
 				F518A58123ED4CB300A41AC8 /* SpeachToText.swift in Sources */,
 				F5096F4C23E5C4AC00078322 /* Constants.swift in Sources */,
+				88925F4423F48B2000425C75 /* AccountViewController.swift in Sources */,
 				45D136C723F42D3500ADEA97 /* Trial.swift in Sources */,
+				88925F4623F48C1C00425C75 /* getTrial.swift in Sources */,
 				20B1568022480ADC00A70D9F /* UIViewController+Extensions.swift in Sources */,
 				45D136B923F405A700ADEA97 /* Utilities.swift in Sources */,
 				208F16792235EAAB002CF75F /* LoginViewController.swift in Sources */,
